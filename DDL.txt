@@ -1,0 +1,34 @@
+--DDL
+
+-- Crear tabla usuario_t
+CREATE TABLE usuario_t(
+    tipo_usuario_id VARCHAR(50) PRIMARY KEY
+);
+
+-- Crear tabla ciudad
+CREATE TABLE ciudad(
+    ciudad_id INT PRIMARY KEY,
+    nombre_ciudad VARCHAR(100),
+    codigo_postal INT
+);
+
+-- Crear tabla usuario
+CREATE TABLE usuario(
+    usuario_id INT PRIMARY KEY,
+    nombre VARCHAR(100),
+    apellido VARCHAR(100),
+    condicion_especial VARCHAR(100),
+    ciudad_id INT,
+    tipo_usuario_id VARCHAR(50),
+    FOREIGN KEY (ciudad_id) REFERENCES ciudad(ciudad_id),
+    FOREIGN KEY (tipo_usuario_id) REFERENCES usuario_t(tipo_usuario_id)
+);
+
+-- Crear tabla empleado
+CREATE TABLE empleado(
+    empleado_id INT PRIMARY KEY,
+    cargo VARCHAR(10),
+    departamento VARCHAR(100),
+    usuario_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES usuario(usuario_id)
+);

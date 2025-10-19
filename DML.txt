@@ -1,0 +1,58 @@
+--DML 
+
+INSERT INTO usuario_t VALUES ('EMPLEADO');
+INSERT INTO usuario_t VALUES ('Cliente');
+INSERT INTO usuario_t VALUES 
+('Proveedor'),
+('Proveedor2'),
+('Proveedor3'),
+('Proveedor4')
+('Proveedor5'),
+('Proveedor6'),
+('Proveedor7'),
+('Proveedor8')
+;
+
+INSERT INTO ciudad (ciudad_id, nombre_ciudad, codigo_postal) VALUES
+(1, 'Bogotá', 110111),
+(2, 'Medellín', 050001),
+(3, 'Cali', 760001),
+(4, 'Barranquilla', 080001),
+(5, 'Cartagena', 130001),
+(6, 'Cúcuta', 540001),
+(7, 'Bucaramanga', 680001),
+(8, 'Pereira', 660001),
+(9, 'Santa Marta', 470001),
+(10, 'Manizales', 170001);
+
+INSERT INTO usuario (usuario_id, nombre, apellido, condicion_especial, ciudad_id, tipo_usuario_id) VALUES
+(1, 'Carlos', 'Gómez', 'Ninguna', 1, 'EMPLEADO'),
+(2, 'Ana', 'Rodríguez', 'Discapacidad visual', 2, 'EMPLEADO'),
+(3, 'Luis', 'Martínez', 'Ninguna', 3, 'EMPLEADO'),
+(4, 'María', 'López', 'Movilidad reducida', 4, 'EMPLEADO'),
+(5, 'Pedro', 'Hernández', 'Ninguna', 5, 'EMPLEADO'),
+(6, 'Laura', 'García', 'Ninguna', 6, 'EMPLEADO'),
+(7, 'Jorge', 'Díaz', 'Condición cardiaca', 7, 'EMPLEADO'),
+(8, 'Sofia', 'Pérez', 'Ninguna', 8, 'EMPLEADO'),
+(9, 'Miguel', 'Silva', 'Diabetes', 9, 'EMPLEADO'),
+(10, 'Elena', 'Ramírez', 'Ninguna', 10, 'EMPLEADCREATE TABLE ciudad(
+ciudad_id INT PRIMARY KEY,
+nombre_ciudad VARCHAR(100),
+codigo_postal INT
+);O');
+
+INSERT INTO empleado (empleado_id, cargo, departamento, usuario_id) VALUES
+(1, 'GERENTE', 'Administración', 1),
+(2, 'CAJERO', 'Ventas', 2),
+(3, 'ASESOR', 'Servicio al cliente', 3),
+(4, 'SUPERVIS', 'Operaciones', 4),
+(5, 'AUXILIAR', 'Logística', 5),
+(6, 'ANALISTA', 'TI', 6),
+(7, 'COORDINA', 'RRHH', 7),
+(8, 'ADMIN', 'Contabilidad', 8),
+(9, 'JEFE', 'Producción', 9),
+(10, 'ASISTENTE', 'Marketing', 10);
+
+SELECT * FROM empleado
+SELECT * FROM usuario
+
